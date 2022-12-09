@@ -1,0 +1,39 @@
+﻿<Window x:Class="train.Main"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:train"
+        mc:Ignorable="d"
+        Title="Main" MinHeight="310" MinWidth="468" Icon="logo.png" >
+    <Viewbox>
+        <Grid  Height="310" Width="468">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="59*"/>
+                <RowDefinition Height="68*"/>
+                <RowDefinition Height="41*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Left">
+                <Image Source="logo.png" Height="41" Width="109" Margin="10 0 0 0"/>
+            </StackPanel>
+            <StackPanel Width="20"/>
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock Text="Авторизация" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20"/>
+                    <TextBlock Text="Введите логин и пароль"/>
+                </StackPanel>
+          
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Height="58" VerticalAlignment="Center" Grid.Row="1" Width="176">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Логин:" Width="60" FontSize="15"/>
+                    <TextBox x:Name="log" Width="115" FontSize="15"/>
+                </StackPanel>
+                <StackPanel Height="10"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Пароль:" Width="60" FontSize="15"/>
+                    <PasswordBox x:Name="pas" Width="115" FontSize="15"/>
+                </StackPanel>
+            </StackPanel>
+            <Button Grid.Row="2" VerticalAlignment="Center" Content="Войти" HorizontalAlignment="Center" FontSize="15" Width="100" Height="24" Click="Button_Click"/>
+        </Grid>
+    </Viewbox>
+</Window>
