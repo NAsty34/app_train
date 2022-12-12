@@ -21,8 +21,14 @@ namespace train
         public string LastName { get; set; }
         public string Login { get; set; }
         public bool IsDeleted { get; set; }
-    
+      
         public virtual Executor Executor { get; set; }
         public virtual Manager Manager { get; set; }
+        public override string ToString()
+        {
+            return FirstName + MiddleName + " " + LastName;
+        }
+        
     }
+    
 }

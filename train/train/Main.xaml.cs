@@ -20,9 +20,11 @@ namespace train
     /// </summary>
     public partial class Main : Window
     {
+        public static User user;
         public Main()
         {
             InitializeComponent();
+            log.Focus();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -36,6 +38,7 @@ namespace train
             var u = l.First();
             if (u.Password == pas.Password)
             {
+                user = u;
                 new Main_task().Show();
                 Close();
             }
@@ -43,9 +46,17 @@ namespace train
             {
                 MessageBox.Show("Пароль неправильный");
             }
+            
            
         }
 
-        
+        private void pas_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                Button_Click(null, null);
+
+            }
+        }
     }
 }

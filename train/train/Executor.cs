@@ -25,8 +25,11 @@ namespace train
         public string Grade { get; set; }
     
         public virtual Manager Manager { get; set; }
+        public string Count { get; set; }
         public virtual User User { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Task> Task { get; set; }
+
+       
     }
 }

@@ -30,7 +30,7 @@
                 <StackPanel Height="10"/>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Пароль:" Width="60" FontSize="15"/>
-                    <PasswordBox x:Name="pas" Width="115" FontSize="15"/>
+                    <PasswordBox x:Name="pas" Width="115" FontSize="15" KeyDown="pas_KeyDown"/>
                 </StackPanel>
             </StackPanel>
             <Button Grid.Row="2" VerticalAlignment="Center" Content="Войти" HorizontalAlignment="Center" FontSize="15" Width="100" Height="24" Click="Button_Click"/>

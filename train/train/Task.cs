@@ -22,6 +22,7 @@ namespace train
         public System.DateTime Deadline { get; set; }
         public double Difficulty { get; set; }
         public int Time { get; set; }
+
         public string Status { get; set; }
         public string WorkType { get; set; }
         public Nullable<System.DateTime> CompletedDateTime { get; set; }
